@@ -1,9 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.12)  18 JAN 2022 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.12)  18 JAN 2022 16:46
 entering extended mode
-**./resume.tex
-(resume.tex
+**./bootloader.tex
+(bootloader.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03>
+(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `resume'
+(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+)
+(resume.tex
 (C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
@@ -450,11 +457,7 @@ LaTeX3 Info: Defining command \SendSettingsToPgf with sig. '' on line 7935.
 
 ) (C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-
-(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
-Package: import 2020/04/01  v 6.2
-))
-(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+) (C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -481,26 +484,26 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box107
 \enit@count@id=\count290
 \enitdp@description=\count291
-)
+)))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 22.
-(resume.aux)
-\openout1 = `resume.aux'.
+h' as default language. on input line 3.
+ (bootloader.aux)
+\openout1 = `bootloader.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -564,109 +567,32 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 22.
- (introduction.tex) (scheduling.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
-
-(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
-
-(C:\Users\quent\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 7468) in paragraph at lines 55--56
-[]\OT1/cmr/m/n/10 Les evenements peu-vent ar-river de maniere
- []
-
-<Figures/scheduling/tempsReponse.png, id=1, 450.9347pt x 167.87718pt>
-File: Figures/scheduling/tempsReponse.png Graphic file (type png)
-<use Figures/scheduling/tempsReponse.png>
-Package pdftex.def Info: Figures/scheduling/tempsReponse.png  used on input lin
-e 101.
-(pdftex.def)             Requested size: 239.35483pt x 89.11024pt.
-[1{C:/Users/quent/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
- <./Figures/scheduling/tempsReponse.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-[]| \OT1/cmr/m/n/10 Anal-yse theorique : theorie des files,
- []
-
-) (multiTaches.tex
-Underfull \hbox (badness 7379) in paragraph at lines 54--56
-[]\OT1/cmr/m/n/10 Un RTOS est plus pour des per-for-mances
- []
-
-[2]) (memoire.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-[]\OT1/cmr/m/n/10 Donnees sta-tiques: Vari-ables glob-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-\OT1/cmr/m/n/10 ales/constantes/statiques partagees en-tre
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-[]| \OT1/cmr/m/n/10 Utilise pour executer du code,
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-[]\OT1/cmr/m/n/10 Generateur de code (des qu'on con-nait
- []
-
-<Figures/memoire/memoire.png, id=20, 354.9511pt x 309.40594pt>
-File: Figures/memoire/memoire.png Graphic file (type png)
-<use Figures/memoire/memoire.png>
-Package pdftex.def Info: Figures/memoire/memoire.png  used on input line 37.
-(pdftex.def)             Requested size: 143.61435pt x 125.19069pt.
-<Figures/memoire/dataStorage.png, id=21, 641.39626pt x 274.02374pt>
-File: Figures/memoire/dataStorage.png Graphic file (type png)
-<use Figures/memoire/dataStorage.png>
-Package pdftex.def Info: Figures/memoire/dataStorage.png  used on input line 43
-.
-(pdftex.def)             Requested size: 143.61435pt x 61.3558pt.
-) (bootloader.tex
-<Figures/bootloader/schemaBloc.png, id=22, 520.19344pt x 306.77109pt>
+or `english'. on input line 3.
+<Figures/bootloader/schemaBloc.png, id=1, 520.19344pt x 306.77109pt>
 File: Figures/bootloader/schemaBloc.png Graphic file (type png)
 <use Figures/bootloader/schemaBloc.png>
 Package pdftex.def Info: Figures/bootloader/schemaBloc.png  used on input line 
 15.
-(pdftex.def)             Requested size: 143.61435pt x 84.6923pt.
-) (tests.tex
-Underfull \hbox (badness 5970) in paragraph at lines 17--4
-[]\OT1/cmr/m/n/10 Vector ta-ble, boot-loader, ap-pli-ca-tion, can-di-
- []
+(pdftex.def)             Requested size: 442.8432pt x 261.15454pt.
+ [1{C:/Users/quent/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-<Figures/tests/test_etages.png, id=23, 534.12047pt x 357.20953pt>
-File: Figures/tests/test_etages.png Graphic file (type png)
-<use Figures/tests/test_etages.png>
-Package pdftex.def Info: Figures/tests/test_etages.png  used on input line 8.
-(pdftex.def)             Requested size: 143.61435pt x 96.04451pt.
-) [4 <./Figures/memoire/memoire.png> <./Figures/memoire/dataStorage.png> <./Fig
-ures/bootloader/schemaBloc.png> <./Figures/tests/test_etages.png>] (resume.aux)
- ) 
+ <./Figures/bootloader/schemaBloc.png>]
+(bootloader.aux) ) 
 Here is how much of TeX's memory you used:
- 8150 strings out of 479334
- 171728 string characters out of 2857084
- 470656 words of memory out of 3000000
- 25505 multiletter control sequences out of 15000+200000
- 406982 words of font info for 41 fonts, out of 3000000 for 9000
+ 8073 strings out of 479334
+ 169938 string characters out of 2857084
+ 448757 words of memory out of 3000000
+ 25461 multiletter control sequences out of 15000+200000
+ 404370 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,239b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\quent\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/quent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/quent/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/quent/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/quent/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/quent/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on resume.pdf (4 pages, 723902 bytes).
+ 104i,11n,106p,267b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\quent\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\tcrm1000.pk><C:/Users/quent/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/quent/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on bootloader.pdf (1 page, 111828 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

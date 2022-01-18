@@ -12,7 +12,8 @@
 \usepackage{siunitx}
 \usepackage{subfiles}
 \usepackage[dvipsnames]{xcolor}
-
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0.1pt, leftmargin=0.5cm}
 \fancyhead[CO]{AdvEmbSof - Résumé 2021}
 \fancyhead[L,RO]{}
 \fancyfoot[L,RO]{}
@@ -20,7 +21,13 @@
 
 \begin{document}
 \begin{multicols}{3}
-\subfile{Chapitre1}
+\subfile{introduction}
+\subfile{scheduling}
+\subfile{multiTaches}
+\subfile{memoire}
+\subfile{bootloader}
+\subfile{tests}
+
+
 \end{multicols}
-\subfile{others}
 \end{document}

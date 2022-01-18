@@ -1,0 +1,216 @@
+\documentclass[resume]{subfiles}
+
+\begin{document}
+\section{Multi tâche}
+
+Besoin de découper le code en petit élement 
+\begin{itemize}
+\item code lisible, structuré et documenté
+\item code testable et modulaire
+\item développement réutilise du code existant pour réduire le temps de développement
+\item code peut être découper entre plusieurs personnes
+\item code malléable et facile à mettre à jour 
+\end{itemize}
+
+Organisation des codes sous formes de classes et méthodes. Le c++ est donc parfait pour ceci.
+
+Il y a deux types de tâches 
+\begin{itemize}
+\item event-triggered : se lance lors d'évènement
+\item time-triggered : cyclique
+\end{itemize}
+
+\subsection{multitâche et OS}
+
+C'est un OS qui nous permet de faire du multitâche 
+
+\subsection{Tâches vs Processus}
+
+Process :
+\begin{itemize}
+\item possède des ressources privée
+\item un processus peut contenir plusieurs tâches 
+\item nécessite plusieurs cœur (vrai //)
+\end{itemize}
+
+Task :
+\begin{itemize}
+\item un seul cœur (faux //)
+\item ressource partagée entre deux taches possibles (gestion avec mutex ou sémaphore) 
+\item s'exécute à tour de rôle selon leurs priorités
+\end{itemize}
+
+\subsection{RTOS}
+
+Le temps réel garanti la complétion d'un process dans un intervalle de temps défini. Par contre il ne dit pas quel temps ça doit prendre, ça doit juste être toujours prédictible.
+
+Un RTOS est un OS qui :
+\begin{itemize}
+\item Sert des applications temps-réelles
+\item Répond à des requêtes dans une délai garantit et prédictible
+\item Process les données dans un nombre déterministe de cycles
+\end{itemize}
+
+Un RTOS est plus pour des performances déterministiques, plutôt que un high troughput
+\begin{itemize}
+\item Les performances peuvent être mesurées par latence (temps qu'il prend)
+\item Les performances peuvent être mesurées par gigue (variation du temps qu'il prend)
+\item Soft RTOS : plus de gigue, généralement répond aux deadlines
+\item Hard RTOS : moins de gigue, répond aux deadlines de manière déterministe
+\end{itemize}
+
+\subsection{Tâches et RTOS}
+
+C'est l'OS qui détermine quelle section du programme va être exécuter et l'accès aux ressources Il gère aussi la synchronisation entre les tâches.
+
+\subsection{Mbed OS}
+
+\subsubsection{Task scheduling}
+
+mbed utilise RTX5 pour ARM avec une faible latence
+
+Les priorités sont configurées telles qu'aucune préemption apparait entre ces handler
+
+C'est une combinaison de priorité et d'un scheduling de round-robin
+\begin{itemize}
+\item Round Robin pour les tâches de même priorités
+\item Basé sur la priorité pour les autres tâches
+\end{itemize}
+
+\subsubsection{Scheduling Options}
+\begin{itemize}
+\item Preemptive : chaque tâche à une priorité différente
+\item Round-Robin : toutes les tâches ont la même priorité
+\item Co-operative multi-tasking : toutes les tâches ont la même priorité et chaque tâche va jusqu'à un appelle bloquant
+\end{itemize}
+
+Par défaut c'est Round-Robin préemptif
+
+\subsubsection{Context switching}
+
+Le Thread Control Block rend le changement de contexte plus facile
+
+Cela prend du temps (200-300 cycles)
+\begin{itemize}
+\item save state, load other state
+\item change state
+\end{itemize}
+
+\subsubsection{Thread States}
+\begin{itemize}
+\item Running
+\item Ready
+\item Waiting/Blocked
+\item Inactive/Terminated
+\end{itemize}
+
+\subsubsection{Thread synchronization}
+
+Dans un système multi-tâches, les différentes tâches peuvent tenter d'obtenir la même ressource ou peuvent attendre l'apparition de différents évènements
+
+Dans certains cas, un tâche donnée peut entrer dans un état Waiting ou Blocked
+
+Il y a plusieurs Waiting states
+
+\subsection{Evènements}
+
+Les évents sont utiles pour attendre certaines conditions
+\begin{itemize}
+\item Un thread attends pour une condition spécifique 
+  \item La condition peut être faite d'un ou plusieurs flags (AND/OR)
+  \item Attente avec timeout est possible
+
+\item Un autre thread set cette condition spécifique
+\item Pas d'attente active
+\end{itemize}
+
+\subsection{Mutex}
+
+Protection des ressources partagées
+\begin{itemize}
+\item Ils s'assurent qu'un seul thread peut avoir accès à une section de code critique
+\item On doit être attentif au deadlock ou starvation
+  \item Faire attention quand on a plusieurs mutex
+  \item Toujours redonner le mutex après utilisation
+\end{itemize}
+
+\subsection{Deadlock}
+
+Condition pour un deadlock (si toutes vraies)
+\begin{itemize}
+\item Le Mutex est inévitable
+\item Préemption est inévitable
+\item Prévenir les conditions circulaire d'attente
+\end{itemize}
+
+Si deadlock alors reset (watchdog)
+
+\subsection{Sémaphore}
+
+Producteur / Consommateur
+
+Un sémaphore gère l'accès des threads à un set de ressources partagées d'un certain type
+\begin{itemize}
+\item A la différence des mutex, un sémaphore peut contrôler l'accès à plusieurs ressources partagées
+\item Une sémaphore active l'accès et la gestion d'un groupe de périphériques identiques
+\end{itemize}
+
+\subsection{Queue/mail}
+\begin{itemize}
+\item Queue : FIFO
+\item Mail : comme une Queue avec de la mémoire pour des messages
+\end{itemize}
+
+\subsection{Inversion de priorité}
+
+Les tâches les plus hautes bloquent les tâches plus basses cela modifie le temps de réponse
+
+Pour empêcher cela il faut suivre les Resources Access Protocols
+
+\subsubsection{Principales sources de d'inversion de priorité}
+\begin{itemize}
+\item section non-préemptive
+\item ressources partagées
+\item synchronisation et exclusion mutuel
+\end{itemize}
+
+\subsection{Resources Access Protocols}
+\begin{itemize}
+\item Inversion de priorité est bornée
+\item Evite les deadlock
+\item Evite les blocages non-nécessaire
+\item Calcul facile du temps max de blocage
+\item Nombre de lbocage max
+\item Facile à implémenter
+\end{itemize}
+
+\subsubsection{Types}
+\begin{itemize}
+\item Non preemption (NPP) : haute pri si lock mutex ok
+\item Priotity Inhertiance (PIP) : si bloque tâche plus haute pri alors prend sa pri (MBED)
+\item High Locker (HLP) : prend la pri de du mutex. La pri du mutex est definit par la plus haute qui l'utilise
+\item Priority Ceiling (PCP) : PIP et HLP prend le plus haut
+\end{itemize}
+
+\subsubsection{Résumé}
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+                       & NPP  & PIP  & HLP    & PCP  \\
+    \hline
+	Inv priorité       & yes  & yes  & yes    & yes  \\
+	\hline
+	Evite deadlock     & yes  & no   & yes    & yes  \\
+	\hline
+	Evite blocage      & no   & yes  & yes/no & yes  \\
+	\hline
+	calcul max blocage & easy & hard & easy   & easy \\  
+    \hline
+    \end{tabular}
+\end{table}
+
+
+
+\end{document}
